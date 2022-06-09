@@ -1,0 +1,39 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.simple-table td, .simple-table th {
+    border: 1px solid #424242;
+    padding: 8px;
+}
+
+.simple-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.simple-table tr:hover {
+    background-color: #ddd;
+}
+
+.simple-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #708090;
+    color: white;
+}    

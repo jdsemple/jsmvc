@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ASPNET_WebApp_MVC.Models.InputFile1>;
+@{
+    ViewData["Title"] = "File #1";
+}
+
+<br /><br />
+<h1>@ViewData["Title"]</h1>
+
+
+<br /><br />
+<h3>Original</h3>
+
+    <table class="simple-table">
+        <tr>
+            <th>Identifier</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Opened</th>
+            <th>Currency</th>
+        </tr>
+        @foreach(InputFile1 item in Model)
+        {
+        <tr>
+            <td>@item.Identifier</td>
+            <td>@item.Name</td>
+            <td>@item.Type</td>
+            <td>@item.Opened</td>
+            <td>@item.Currency</td>
+        </tr>
+        }
+    </table>
+
+<br />
+<a asp-area="" asp-controller="File1" asp-action="Results">Translate</a>
+
+<br /><br />

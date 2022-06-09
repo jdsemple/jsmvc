@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ASPNET_WebApp_MVC.Models.TargetFile>;
+@{
+    ViewData["Title"] = "File #1";
+}
+
+<br /><br />
+<h1>@ViewData["Title"]</h1>
+
+
+<br /><br />
+<h3>Results</h3>
+
+    <table class="simple-table">
+        <tr>
+            <th>Account Code</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Open Date</th>
+            <th>Currency</th>
+        </tr>
+        @foreach(TargetFile item in Model)
+        {
+        <tr>
+            <td>@item.AccountCode</td>
+            <td>@item.Name</td>
+            <td>@item.Type</td>
+            @if (@item.OpenedDate.ToString() != "0001-01-01 12:00:00 AM") {
+                <td>@item.OpenedDate</td>
+            } else
+            {
+                <td>N/A</td>
+            }
+            <td>@item.Currency</td>
+        </tr>
+        }
+    </table>
+
+<br />
+<a asp-area="" asp-controller="File1" asp-action="">Go Back</a>
+
+<br /><br />
